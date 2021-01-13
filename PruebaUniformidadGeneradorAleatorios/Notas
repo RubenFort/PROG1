@@ -1,0 +1,14 @@
+Construir un programa que pruebe si el generador de aleatorios es "justo", hay
+que ver si la probabilidad de que salga cualquier valor de la lista es casi identica
+
+- Construir un generador (un dado de 6 caras 1 .. 6)
+- "Lanzamos el dado" 6.000.000 de veces (Ley de los grandes números) y debería
+    aparecer cadaq una de las caras 1.000.000 de veces
+- Al finalizar hay que imprimir algo del tipo:
+    veces 1: vecesQueSaleEl1 (porcentajeDel1)
+    .
+    .
+    veces 6: vecesQueSaleEl6 (porcentajeDel6)
+
+
+    

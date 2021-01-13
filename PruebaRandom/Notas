@@ -1,0 +1,14 @@
+Para generar aleatorios Java se puede hacer de 2 maneras
+
+1) Usando el método random() de la clase Math del paquete java.lang de la siguiente manera
+    double aleatoriao = Math.random()
+    en aleatorio se guarda un valor en el rango [0.0 .. 1.0)
+    
+    Si se necesita un entero, poe ejemplo en el rango [0 .. 10). lo que hacemos es multiplicar
+    el resultado anterior por 10 y guardarlo en un int o long para "perder" los decimales
+
+    Si necesitara un entero que no parte de 0, por ejemplo para un dado de parchis necesito
+    que vaya [1 .. 6] ¿Que se os ocurre?
+
+    La otra manera es instanciar (crear objeto) de la clase Random del paquete java.util
+    y usar, alguno de sus métodos según lo que necesite generar

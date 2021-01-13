@@ -1,0 +1,10 @@
+Tipo Enumerado
+
+El nombre del tipo podría ser TurnoTrabajo y MAÑANA, ... serían los valores (constantes) del enumerado
+Turno de trabajo: MAÑANA, TARDE, NOCHE
+
+El nombre del tipo podría ser DiaSemana y LUNES, ... serían los valores (constantes) del enumerado
+Dia de semana: LUNES, MARTES, ....., DOMINGO
+
+El nombre del tipo podría ser Mes y ENERO, ... serían los valores (constantes) del enumerado
+Meses del año: ENERO,..., DICIEMBRE

@@ -1,0 +1,19 @@
+Decimal {0,1,....,9}  23454
+Binario {0,1} 01110110b
+Hexadecimal {0,1,2,..,9,A,B,C,D,E,F} 0x12AB45C
+Octal {0,1,2, ..7} 0453207  010
+
+
+Parsear la fecha para obtener día, mes y año para usar el constructor Fecha(int dia, int mes, int año)
+0123456789
+dd/mm/aaaa
+
+día es la subcadena que empieza en la pos:0 y finaliza en pos:1
+mes es la subcadena que empieza en la pos:3 y finaliza en pos:4
+año es la subcadena que empieza en la pos:6 y finaliza (en la última) que es la pos:9
+
+String cadena = "Hola Mundo";
+String vacio = ""; //Cadena vacía
+
+Registro Contacto
+id#nombre#.....#tieneCoche

@@ -1,0 +1,4 @@
+9
+0#Ruben Martinez#23/3/1999#981456852#FAMILIA#true
+4#Carlos Ribera#16/11/2003#677456456#TRABAJO#false
+7#Hector Moralejo#5/1/1986#676459453#ENEMIGO#false

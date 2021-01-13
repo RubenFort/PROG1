@@ -1,0 +1,4 @@
+10
+0#Ruben Martinez#23/03/1999#981456852#FAMILIA#true
+4#Carlos Rivera#16/11/2003#677456456#TRABAJO#false
+9#Roberto Lopez#10/06/2003#677896541#AMIGO#true

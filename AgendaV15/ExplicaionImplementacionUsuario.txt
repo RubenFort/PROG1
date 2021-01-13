@@ -1,0 +1,82 @@
+Rubén Fortúnez
+
+Proceso creacion de usuario y contraseña.
+
+-Creamos en la AgendaV13 un archivo users.txt, en él ecribiremos en cada renglón
+ un usuario y su clave utilizando # como separador:
+    
+    usuario1#clave1
+    usuario2#clave2
+    ...
+
+-Al arrancar el programa nos pedirá usuario y constraseña, y lo hará hasta que 
+ acertemos. Para hacer esto rodeamos la petición con un do-while y con la 
+ variable "boolean log" como condición.
+
+-Creamos una clase nueva llamada "Usuario".
+    
+    En ella definimos sus atributos String usuario y String contrasena.
+    
+    Creamos constructores, el que yenemos por defecto uno con sus 2 atributos y 
+    otro usando un unico String; para de esta manera usando split poder separar 
+    usuario(campos[0]) y contraseña(campos[1]):
+    
+        public Usuario(String clave) {
+        String[] campos = clave.split("#");
+        
+        this.usuario = campos[0];
+        this.contrasena = campos[1];   
+    }
+
+    Reescribimos el método "equals" de Usuario, para que cuando se utilice 
+    para saber si el "usuario" y "constrasena" tecleados son correctos, compare 
+    estos con los String usuario y los String contrasena guardados en el "Vector"
+    y no sus identidicadores únicos con los de estos.
+
+-Antes de cargar los datos en la agenda, creamos un método llamado "loguearse()".
+ En él pedimos usuario y contraseña y los guardamos en 2 variables de tipo String.
+ Creamos un Scanner de tipo FileReader para poder leer los datos de users.txt.
+ Cada linea que leemos del fichero la guardamos en una variable String y con
+ ella y el constructor "public Usuario(String clave)" creamos un usuario que 
+ guardamos en la variable "Usuario u", acto seguido con el método "addUsuario" de 
+ la clase "Agenda" guardamos este usuario en un "Vector". 
+ Para guardar el usuario en el "Vector <Usuario> usuarios" creado previamente, 
+ utilizamos el método "public boolean add(E e)", que agrega el objeto que se le 
+ pasa al final del Vector.
+ Esto sucede con todas las lineas del archivo "users.txt" debido a la condición
+ que se usó en el While. El metodo "hasNextLine" de la clase Scanner devuelve
+ "true" si hay linea que leer y "false" si no hay:
+
+    while (lectorFicheroUsers.hasNextLine())
+
+  Con el método "close()" cerramos el archivo "user.txt".
+
+ Usando el método de la clase "Agenda" "compruebaUsuario" y con el constructor
+ "public Usuario(String usuario, String contraseña)" y los datos de usuario y 
+ contraseña solicitados previamente por teclado creo un objeto Usuario llamado 
+ "buscado".
+    
+ Usando el método "public int indexOf(Object o)" de la clase "Vector", y gracias
+ a previamente haber reescrito el método equals de Usuario, busco si el par de 
+ datos introducidos por teclado coinciden con alguno de los pares guardados en 
+ el "Vector".
+ Si esto es así, devuelve un int que corresponde al indice del "Vector" en el
+ que se encuentra la coincidencia; en caso contrario devuelve -1. Ese Valor es
+ que devuelve el método "compruebaUsuario".
+
+    public int compruebaUsuario (String usuario, String clave){
+        Usuario buscado = new Usuario(usuario, clave);
+        
+        return usuarios.indexOf(buscado);
+    }
+
+-Estamos nuevamente en el método "loguearse()", en la clase Principal
+ Si hubo coincidencia entre los objetos Usuario la variable "indice" será 
+ distinta de -1 por lo tanto "log = true" y saldremos del bucle do-while.
+ Si no hubo coincidencia la variable "indice" será valdrá -1 por lo tanto 
+ "log" segurirá valiendo "flase", saldrá un mensaje de ""Usuario o contraseña 
+ (o ambos) incorrecto" y nos volverá a pedir usuario y contraseña hasta que 
+ acertemos.
+
+ El contenido del método "loguearse()" está rodeado de un try-catch por si por
+ algún motivo no se pudiese acceder al fichero.

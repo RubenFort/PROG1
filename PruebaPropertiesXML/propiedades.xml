@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Ejemplo de prueba de properties</comment>
+<entry key="fuente">arial</entry>
+<entry key="cursiva">off</entry>
+<entry key="tamaño">14</entry>
+<entry key="color-fondo">rojo</entry>
+<entry key="color-fuente">verde</entry>
+</properties>
