@@ -20,13 +20,13 @@ public class Principal {
         String ss = "Hola Mundo";
         Date ds = new Date(100, 8, 10); // 10 de Septiempre de 2000
         Coche cs = new Coche("C5555FG", new Date(110, 5, 5),"44567890J",100000);
-     
+        
         oos.writeBoolean(bs);
         oos.writeInt(is);
         oos.writeObject(ss);
         oos.writeObject(ds);
         oos.writeObject(cs);
-        
+
         oos.close();
         
         //------------------------------------------------------------------------------------------
